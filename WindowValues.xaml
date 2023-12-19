@@ -1,0 +1,78 @@
+﻿<Window x:Class="Sphere.WindowValues"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sphere"
+        mc:Ignorable="d"
+        Title="Значение" Height="250" Width="400"
+        Loaded="Window_Loaded">
+    <Grid x:Name="MainView">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock IsEnabled="False" Grid.Row="0" Grid.Column="0" Text="Правая" FontWeight="Bold" FontSize="18" Grid.ColumnSpan="3" TextAlignment="Center"/>
+        <TextBlock IsEnabled="False" Grid.Row="0" Grid.Column="3" Text="Левая" FontWeight="Bold" FontSize="18" Grid.ColumnSpan="3" TextAlignment="Center"/>
+        <TextBox Name="L17" Grid.Row="1" Grid.Column="0" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="7"/>
+        <TextBox Name="L16" Grid.Row="2" Grid.Column="0" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="6"/>
+        <TextBox Name="L15" Grid.Row="3" Grid.Column="0" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="5"/>
+        <TextBox Name="L14" Grid.Row="4" Grid.Column="0" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="4"/>
+        <TextBox Name="L13" Grid.Row="5" Grid.Column="0" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="3"/>
+        <TextBox Name="L12" Grid.Row="6" Grid.Column="0" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="2"/>
+        <TextBox Name="L11" Grid.Row="7" Grid.Column="0" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="1"/>
+        <TextBox Name="L27" Grid.Row="1" Grid.Column="1" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="14"/>
+        <TextBox Name="L26" Grid.Row="2" Grid.Column="1" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="13"/>
+        <TextBox Name="L25" Grid.Row="3" Grid.Column="1" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="12"/>
+        <TextBox Name="L24" Grid.Row="4" Grid.Column="1" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="11"/>
+        <TextBox Name="L23" Grid.Row="5" Grid.Column="1" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="10"/>
+        <TextBox Name="L22" Grid.Row="6" Grid.Column="1" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="9"/>
+        <TextBox Name="L21" Grid.Row="7" Grid.Column="1" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="8"/>
+        <TextBox Name="L37" Grid.Row="1" Grid.Column="2" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="21"/>
+        <TextBox Name="L36" Grid.Row="2" Grid.Column="2" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="20"/>
+        <TextBox Name="L35" Grid.Row="3" Grid.Column="2" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="19"/>
+        <TextBox Name="L34" Grid.Row="4" Grid.Column="2" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="18"/>
+        <TextBox Name="L33" Grid.Row="5" Grid.Column="2" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="17"/>
+        <TextBox Name="L32" Grid.Row="6" Grid.Column="2" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="16"/>
+        <TextBox Name="L31" Grid.Row="7" Grid.Column="2" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="15"/>
+        <TextBox Name="L47" Grid.Row="1" Grid.Column="3" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="28"/>
+        <TextBox Name="L46" Grid.Row="2" Grid.Column="3" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="27"/>
+        <TextBox Name="L45" Grid.Row="3" Grid.Column="3" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="26"/>
+        <TextBox Name="L44" Grid.Row="4" Grid.Column="3" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="25"/>
+        <TextBox Name="L43" Grid.Row="5" Grid.Column="3" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="24"/>
+        <TextBox Name="L42" Grid.Row="6" Grid.Column="3" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="23"/>
+        <TextBox Name="L41" Grid.Row="7" Grid.Column="3" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="22"/>
+        <TextBox Name="L57" Grid.Row="1" Grid.Column="4" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="35"/>
+        <TextBox Name="L56" Grid.Row="2" Grid.Column="4" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="34"/>
+        <TextBox Name="L55" Grid.Row="3" Grid.Column="4" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="33"/>
+        <TextBox Name="L54" Grid.Row="4" Grid.Column="4" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="32"/>
+        <TextBox Name="L53" Grid.Row="5" Grid.Column="4" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="31"/>
+        <TextBox Name="L52" Grid.Row="6" Grid.Column="4" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="30"/>
+        <TextBox Name="L51" Grid.Row="7" Grid.Column="4" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="29"/>
+        <TextBox Name="L67" Grid.Row="1" Grid.Column="5" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="42"/>
+        <TextBox Name="L66" Grid.Row="2" Grid.Column="5" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="41"/>
+        <TextBox Name="L65" Grid.Row="3" Grid.Column="5" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="40"/>
+        <TextBox Name="L64" Grid.Row="4" Grid.Column="5" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="39"/>
+        <TextBox Name="L63" Grid.Row="5" Grid.Column="5" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="38"/>
+        <TextBox Name="L62" Grid.Row="6" Grid.Column="5" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="37"/>
+        <TextBox Name="L61" Grid.Row="7" Grid.Column="5" FontSize="16" Text="60" TextAlignment="Center" PreviewTextInput="NumberValidationTexBox" GotFocus="CellFocus" TabIndex="36"/>
+        <Button Grid.Row="8" Grid.Column="4" Grid.ColumnSpan="2" Name="btnOk" Content="Ok" Click="btnOk_Click" TabIndex="43"/>
+
+        <Line Grid.Row="1" Grid.Column="2" Grid.RowSpan="7" X1="0" Y1="0" X2="0" Y2="1" Stretch="Uniform" Stroke="Black" StrokeThickness="3" HorizontalAlignment="Right"/>
+    </Grid>
+</Window>

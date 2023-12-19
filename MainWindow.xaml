@@ -1,0 +1,107 @@
+﻿<Window x:Class="Sphere.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sphere"
+        mc:Ignorable="d"
+        Title="Сфера" Height="720" Width="1280">
+    <Grid>
+        <Border x:Name ="border" Background="White" MouseDown="border_MouseDown" MouseMove="border_MouseMove" MouseUp="border_MouseUp" MouseLeave="border_MouseLeave" MouseWheel="border_MouseWheel">
+            <Grid >
+                <Viewport3D x:Name="sphereVisualization" OpacityMask="White">
+                    <Viewport3D.Resources>
+                        <local:LookBackConverter x:Key="lookBackConverter" />
+                    </Viewport3D.Resources>
+                    <Viewport3D.Camera>
+                        <PerspectiveCamera x:Name="camera" 
+                                           UpDirection="0, 1, 0" 
+                                           LookDirection="{Binding Position, Converter={StaticResource lookBackConverter}, RelativeSource={RelativeSource Self}}"
+                                           Position="6.0, 0.0, 0.0" />
+                    </Viewport3D.Camera>
+                    <ModelVisual3D>
+                        <ModelVisual3D.Content>
+                            <PointLight x:Name="light"
+                                        Position="6.0, 0.0, 0.0"/>
+                        </ModelVisual3D.Content>
+                    </ModelVisual3D>
+                </Viewport3D>
+                <Viewport3D x:Name="designationsVisualizer">
+                    <Viewport3D.Resources>
+                        <local:LookBackConverter x:Key="lookBackConverter" />
+                    </Viewport3D.Resources>
+                    <Viewport3D.Camera>
+                        <PerspectiveCamera x:Name="designationsCamera"
+                                           UpDirection="0, 1, 0"
+                                           LookDirection="{Binding Position, Converter={StaticResource lookBackConverter}, RelativeSource={RelativeSource Self}}"
+                                           Position="6.0, 0.0, 0.0" />
+                    </Viewport3D.Camera>
+                    <ModelVisual3D>
+                        <ModelVisual3D.Content>
+                            <PointLight x:Name="designationsLight"
+                                        Position="6.0, 0.0, 0.0"/>
+                        </ModelVisual3D.Content>
+                    </ModelVisual3D>
+                </Viewport3D>
+
+                <Label Content="Прозрачность:" HorizontalAlignment="Left" Margin="1000,0,0,0" />
+                <Slider Maximum="100" Minimum="0" Value="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1100,5,0,0" Width="100" Height="18" ValueChanged="Slider_ValueChanged" />
+                <Label Content="Масштаб:" Margin="1000,30,0,0" Width="81" HorizontalAlignment="Left"/>
+                <Slider Name="cameraZoomSlider" HorizontalAlignment="Left" Maximum="48" Minimum="40" Value="44" VerticalAlignment="Top" Width="100"
+                        ValueChanged="cameraZoomSlider_ValueChanged" Margin="1100,35,0,0"/>
+
+                <Label Content="Эллипс:" HorizontalAlignment="Left" Margin="1000,60,0,0" />
+                <StackPanel Margin="1055,67,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top">
+                    <RadioButton x:Name="rb_NormCorridor"
+                                 Content="Норма"
+                                 IsChecked="True"
+                                 Checked="rb_NormCorridor_Checked"/>
+                    <RadioButton x:Name="rb_RiskCorridor"
+                                 Content="Коридор"
+                                 Checked="rb_RiskCorridor_Checked"/>
+                    <RadioButton x:Name="rb_Either"
+                                 Content="Эфиры"
+                                 Checked="rb_Either_Checked"/>
+                </StackPanel>
+                <Label Content="Пол:" HorizontalAlignment="Left" Margin="1000,120,0,0" />
+                <StackPanel Margin="1055,125,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top">
+                    <RadioButton x:Name="rb_Male"
+                                 Content="M"
+                                 IsChecked="True"
+                                 Checked="rb_Male_Checked"/>
+                    <RadioButton x:Name="rb_Female"
+                                 Content="F"
+                                 Checked="rb_Female_Checked"/>
+                </StackPanel>
+                <Label Content="Вращение:" HorizontalAlignment="Left" Margin="1000,160,0,0"/>
+                <StackPanel Margin="1070,165,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Orientation="Horizontal">
+                    <Button x:Name="btRotationRight"
+                            Content="Вправо →"
+                            Height="18"
+                            Click="btRotationRight_Click"/>
+                    <Button x:Name="btRotationLeft"
+                            Content="Влево ←"
+                            Height="18"
+                            Margin="10 0 0 0"
+                            Click="btRotationLeft_Click"/>
+                </StackPanel>
+
+                <RadioButton x:Name="rb_fill" Content="Заливка" HorizontalAlignment="Left" Margin="10,662,0,0" VerticalAlignment="Top" Checked="rb_fill_Checked"/>
+                <RadioButton x:Name="rb_grid" Content="Сетка" HorizontalAlignment="Left" Margin="80,662,0,0" VerticalAlignment="Top" IsChecked="True" Checked="rb_grid_Checked"/>
+                <RadioButton x:Name="rb_cross_section" Content="Сечение" HorizontalAlignment="Left" Margin="140,662,0,0" VerticalAlignment="Top" Checked="rb_cross_section_Checked"/>
+                <CheckBox Name="cb_horizontal_line" Content="Горизонтальные линии" HorizontalAlignment="Left" Margin="10,564,0,0" VerticalAlignment="Top" IsChecked="True" Click="cb_horizontal_line_Click" Visibility="Visible"/>
+                <CheckBox Name="cb_vertival_line" Content="Вертикальные линии" HorizontalAlignment="Left" Margin="10,584,0,0" VerticalAlignment="Top" IsChecked="True" Click="cb_vertival_line_Click" Visibility="Visible"/>
+                <CheckBox Name="cb_diagonal_line" Content="Диагональные линии" HorizontalAlignment="Left" Margin="10,604,0,0" VerticalAlignment="Top" IsChecked="True" Click="cb_diagonal_line_Click" Visibility="Visible"/>
+                <CheckBox Name="cb_point" Content="Только точки" HorizontalAlignment="Left" Margin="10,624,0,0" VerticalAlignment="Top" Click="cb_point_Click" Visibility="Visible"/>
+            </Grid>
+        </Border>
+        <Button x:Name="btnValues" Content="Значение" HorizontalAlignment="Left" Margin="1187,659,0,0" VerticalAlignment="Top" Width="75" Click="btnValues_Click"/>
+    </Grid>
+</Window>
